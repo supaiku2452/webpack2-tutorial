@@ -1,7 +1,8 @@
 # webpack2 チュートリアル
 
 webpack2の基本的な使用方法を理解するためのチュートリアル
-[チュートリアル](https://blog.madewithenvy.com/getting-started-with-webpack-2-ed2b86c68783)
+
+[参考ページ](https://blog.madewithenvy.com/getting-started-with-webpack-2-ed2b86c68783)
 
 基本的には**写経**となります。
 また、チュートリアルとして参考にしたページの全てを実践しているわけではなく、
