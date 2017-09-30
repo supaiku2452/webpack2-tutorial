@@ -4,6 +4,8 @@ webpack2の基本的な使用方法を理解するためのチュートリアル
 [チュートリアル](https://blog.madewithenvy.com/getting-started-with-webpack-2-ed2b86c68783)
 
 基本的には**写経**となります。
+また、チュートリアルとして参考にしたページの全てを実践しているわけではなく、
+基本的な構文のみ実践している。
 
 ## First Step
 
@@ -122,3 +124,50 @@ module.exports = {
 
 2. `webpack (-p)`を実行する。
 実行後のdistディレクトリには、**app.bundle.js/events.bundle.js/vendor.bundle.js**が生成されている。
+
+## Loaders
+
+1. Babelをインストールする。
+
+`yarn add --dev babel-loader babel-core babel-preset-es2015`
+
+2. webpackを修正する。
+
+```javascript
+
+module.exports = {
+// ...
+    module: {
+        rules:[
+            {
+                test: /\.js$/,
+                exclude: [/node_modules/],
+                use: [{
+                  loader: 'babel-loader',
+                    options: { presets: ['es2015']}
+                }]
+            }
+        ]
+    },
+// ...
+};
+```
+
+cssのローダーを追加する場合は、以下定義を追加する(**style-loader**と**css-loader**を追加しておくこと)。
+
+```javascript
+module.exports = {
+// ...
+    module: {
+        rules:[
+            {
+                test: /\.css$/,
+                use: ['style-loader', 'css-loader']
+            }
+        ]
+    },
+// ...
+};
+```
+
+3. `webpack (-p)`を実行する。

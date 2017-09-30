@@ -15578,19 +15578,21 @@ return zhTw;
 
 /***/ }),
 /* 117 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_moment__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_moment___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_moment__);
 
 
-const vendor = __webpack_require__(119);
+var _moment = __webpack_require__(0);
 
-var rightNow = __WEBPACK_IMPORTED_MODULE_0_moment___default()().format('MMMM Do YYYY, h:mm:ss a');
+var _moment2 = _interopRequireDefault(_moment);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var vendor = __webpack_require__(119);
+
+var rightNow = (0, _moment2.default)().format('MMMM Do YYYY, h:mm:ss a');
 console.log(rightNow);
-
 
 /***/ }),
 /* 118 */
@@ -15848,10 +15850,12 @@ webpackContext.id = 118;
 /* 119 */
 /***/ (function(module, exports, __webpack_require__) {
 
-/* WEBPACK VAR INJECTION */(function(module) {module.export = () => {
-    console.log("vendor.js");
-}
+"use strict";
+/* WEBPACK VAR INJECTION */(function(module) {
 
+module.export = function () {
+    console.log("vendor.js");
+};
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)(module)))
 
 /***/ })
